@@ -1,11 +1,24 @@
+import {
+  Quote,
+  Speaker,
+  Wrapper,
+} from "./styles";
+
+import { string } from "prop-types";
+
 const Quotes = ({ quote, speaker, button }) => {
   return (
-    <div>
-      <p>{quote}</p>
-      <p>{speaker}</p>
+    <Wrapper>
+      <Quote>{quote}</Quote>
+      <Speaker>{speaker}</Speaker>
       <button>Quote No Jutsu</button>
-    </div>
+    </Wrapper>
   );
+};
+
+Quotes.propTypes = {
+  quote: string,
+  speaker: string,
 };
 
 export default Quotes;
