@@ -1,6 +1,7 @@
 import {
   render,
   screen,
+  fireEvent,
 } from "@testing-library/react";
 import { Quotes } from "../components";
 const quote = "teste quote";
@@ -14,4 +15,22 @@ test("Deve renderizar a frase, o autor e um botão", () => {
   const quoteEl = screen.getByText(quote);
   const speakerEl = screen.getByText(speaker);
   const buttonEl = screen.getByRole("button");
+});
+
+test("Chama um callback quando o botão for pressionado", () => {
+  const callback = jest.fn();
+
+  render(
+    <Quotes
+      quote={quote}
+      speaker={speaker}
+      onUpdate={callback}
+    />
+  );
+
+  const buttonEl = screen.getByRole("button");
+
+  fireEvent.click(buttonEl);
+
+  expect(callback).toHaveBeenCalled.once;
 });
