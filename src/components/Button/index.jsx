@@ -1,7 +1,7 @@
 import { string } from "prop-types";
 import ButtonStyled from "./styles";
 
-const Button = ({ children, onclick }) => {
+const Button = ({ children }) => {
   return <ButtonStyled>{children}</ButtonStyled>;
 };
 
