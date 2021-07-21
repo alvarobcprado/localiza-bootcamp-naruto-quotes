@@ -10,6 +10,10 @@ const ButtonStyled = styled.button`
   font-family: "New Tegomin", serif;
   cursor: pointer;
   box-shadow: #333 3px 3px;
+
+  :hover {
+    background: #990000;
+  }
 `;
 
 export default ButtonStyled;
