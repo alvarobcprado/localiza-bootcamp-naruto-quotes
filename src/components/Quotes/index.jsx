@@ -4,6 +4,8 @@ import {
   Wrapper,
 } from "./styles";
 
+import { Button } from "../../components";
+
 import { string } from "prop-types";
 
 const Quotes = ({ quote, speaker, button }) => {
@@ -11,7 +13,7 @@ const Quotes = ({ quote, speaker, button }) => {
     <Wrapper>
       <Quote>{quote}</Quote>
       <Speaker>{speaker}</Speaker>
-      <button>Quote No Jutsu</button>
+      <Button>Quote No Jutsu</Button>
     </Wrapper>
   );
 };
