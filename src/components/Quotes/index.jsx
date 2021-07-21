@@ -8,12 +8,14 @@ import { Button } from "../../components";
 
 import { string } from "prop-types";
 
-const Quotes = ({ quote, speaker, button }) => {
+const Quotes = ({ quote, speaker, onUpdate }) => {
   return (
     <Wrapper>
       <Quote>{quote}</Quote>
       <Speaker>{speaker}</Speaker>
-      <Button>Quote No Jutsu</Button>
+      <Button onClick={onUpdate}>
+        Quote No Jutsu
+      </Button>
     </Wrapper>
   );
 };
