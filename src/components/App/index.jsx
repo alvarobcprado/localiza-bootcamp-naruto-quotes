@@ -6,8 +6,6 @@ import { Content, NarutoImg } from "./styles";
 function App() {
   return (
     <Content>
-      <p>quote - Speaker</p>
-      <button>Quote No Jutsu</button>
       <NarutoImg
         src={narutoImg}
         alt="Naruto with Kunai"
