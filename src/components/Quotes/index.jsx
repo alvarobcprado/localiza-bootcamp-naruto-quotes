@@ -13,7 +13,7 @@ const Quotes = ({ quote, speaker, onUpdate }) => {
     <Wrapper>
       <Quote>{quote}</Quote>
       <Speaker>{speaker}</Speaker>
-      <Button onClick={onUpdate}>
+      <Button onUpdate={onUpdate}>
         Quote No Jutsu
       </Button>
     </Wrapper>

@@ -1,8 +1,12 @@
 import { string } from "prop-types";
 import ButtonStyled from "./styles";
 
-const Button = ({ children }) => {
-  return <ButtonStyled>{children}</ButtonStyled>;
+const Button = ({ children, onUpdate }) => {
+  return (
+    <ButtonStyled onClick={onUpdate}>
+      {children}
+    </ButtonStyled>
+  );
 };
 
 export default Button;
