@@ -6,6 +6,10 @@ import { Content, NarutoImg } from "./styles";
 import { Quotes } from "../../components";
 import { getQuote } from "../../services";
 
+import jutsoSound from "../../assets/sounds/jutso.mp3";
+
+const audio = new Audio(jutsoSound);
+
 function App() {
   const [state, setState] = useState({
     quote: "ok",
@@ -16,7 +20,7 @@ function App() {
 
   const onUpdate = async () => {
     const quote = await getQuote();
-    console.log(quote);
+    audio.play();
     setState(quote);
   };
   return (
