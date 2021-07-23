@@ -1,6 +1,6 @@
 // import { ThemeProvider } from "styled-components";
 // import { Reset } from "styled-reset";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import narutoImg from "../../assets/images/naruto.png";
 import { Content, NarutoImg } from "./styles";
 import { Quotes } from "../../components";
@@ -16,12 +16,14 @@ function App() {
     speaker: "Speaker",
   });
 
-  console.log(state);
+  useEffect(() => {
+    onUpdate();
+  }, []);
 
   const onUpdate = async () => {
     const quote = await getQuote();
-    audio.play();
     setState(quote);
+    audio.play();
   };
   return (
     <Content>

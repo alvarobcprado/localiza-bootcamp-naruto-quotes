@@ -49,3 +49,12 @@ test("Chama a api ao clicar no botão e atualiza seu text", async () => {
 
   expect(quoteEl).toBeInTheDocument;
 });
+
+test("Chama a api ao iniciar a aplicação e renderiza sua resposta", async () => {
+  render(<App />);
+  const quoteEl = await screen.findByText(
+    response.quote
+  );
+
+  expect(quoteEl).toBeInTheDocument;
+});
