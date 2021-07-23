@@ -18,7 +18,9 @@ test("Deve renderizar a frase, o autor e um botão", () => {
 });
 
 test("Chama um callback quando o botão for pressionado", () => {
-  const callback = jest.fn();
+  const callback = jest.fn((e) =>
+    e.preventDefault()
+  );
 
   render(
     <Quotes

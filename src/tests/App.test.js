@@ -31,7 +31,7 @@ test("renders the app, with a button, a quote and a button", () => {
 
   const buttonEl = screen.getByRole("button");
   const imageEl = screen.getByRole("img");
-  const textEl = screen.getByText(/Speaker/);
+  const textEl = screen.getByText(/loading/);
 
   expect(buttonEl).toBeInTheDocument;
   expect(imageEl).toBeInTheDocument;
