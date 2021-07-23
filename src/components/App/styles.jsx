@@ -10,6 +10,6 @@ export const Content = styled.div`
 `;
 
 export const NarutoImg = styled.img`
-  max-width: 50vw;
+  max-width: 45vw;
   align-self: flex-end;
 `;

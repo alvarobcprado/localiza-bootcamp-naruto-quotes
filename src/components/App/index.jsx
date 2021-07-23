@@ -12,7 +12,7 @@ import { getQuote } from "../../services";
 
 import jutsoSound from "../../assets/sounds/jutso.mp3";
 
-const audio = new Audio(jutsoSound);
+let audio = new Audio(jutsoSound);
 
 function App() {
   const isMounted = useRef(true);
@@ -26,7 +26,9 @@ function App() {
 
     if (isMounted.current) {
       setState(quote);
-      audio.play();
+      audio.play().catch((e) => {
+        console.log("Deu ruim: ", e);
+      });
     }
   };
 
